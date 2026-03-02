@@ -8,4 +8,8 @@ const handleLogin = (userEmail, userPassword) => {
   });
 };
 
-export { handleLogin };
+const getAllUsers = (inputId) => {
+  return axios.get(`/api/get-all-users?id=${inputId}`);
+};
+
+export { handleLogin, getAllUsers };
