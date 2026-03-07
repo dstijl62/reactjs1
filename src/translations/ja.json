@@ -1,26 +1,26 @@
 {
   "homeheader": {
-    "specilaity": "Medical specialty",
-    "searchdoctor": "Find a doctor by specialty",
-    "healthfacility": "Medical facilities",
-    "choosefacility": "Choose a hospital or clinic",
-    "doctor": "Doctor",
-    "choosedoctor": "Choose a good doctor",
-    "package": "Health check package",
-    "generalcheck": "General health check-up",
-    "help": "Help!"
+    "specilaity": "診療科目",
+    "searchdoctor": "専門分野で医師を探す",
+    "healthfacility": "医療施設",
+    "choosefacility": "病院・クリニックを選ぶ",
+    "doctor": "医師",
+    "choosedoctor": "優秀な医師を選ぶ",
+    "package": "健康診断パッケージ",
+    "generalcheck": "総合健康診断",
+    "help": "ヘルプ"
   },
 
   "banner": {
-    "title1": "Healthcare Platform",
-    "title2": "Comprehensive Healthcare Services",
-    "search": "Search for medical specialties",
-    "specializedexam": "Specialized examination",
-    "telemedicine": "Telemedicine consultation",
-    "generalexam": "General health check-up",
-    "labtest": "Medical laboratory tests",
-    "mentalhealth": "Mental health",
-    "dentalexam": "Dental examination"
+    "title1": "医療プラットフォーム",
+    "title2": "総合的なヘルスケアサービス",
+    "search": "診療科目を検索",
+    "specializedexam": "専門診療",
+    "telemedicine": "オンライン診療",
+    "generalexam": "総合健康チェック",
+    "labtest": "医療検査",
+    "mentalhealth": "メンタルヘルス",
+    "dentalexam": "歯科検診"
   },
 
   "common": {
