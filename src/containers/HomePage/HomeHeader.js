@@ -26,17 +26,17 @@ class HomeHeader extends Component {
 
     return (
       <React.Fragment>
-        <div className="home-header-container">
+        {/* <div className="home-header-container">
           <div className="home-header-content">
             <div className="left-content">
               <i className="fas fa-bars"></i>
 
               <div className="header-logo">
-                {/* <img src={logo} alt="icon" /> */}
+               
               </div>
-            </div>
+            </div> */}
 
-            {/* =============================== center block */}
+        {/*             
             <div className="center-content">
               <div className="child-content">
                 <div>
@@ -45,46 +45,42 @@ class HomeHeader extends Component {
                   </b>
                 </div>
                 <div className="subs-title">
-                  {/* <FormattedMessage id="homeheader.searchdoctor" /> */}
                 </div>
-              </div>
+              </div> */}
 
-              <div className="child-content">
+        {/* <div className="child-content">
                 <div>
                   <b>
                     <FormattedMessage id="homeheader.healthfacility" />
                   </b>
                 </div>
                 <div className="subs-title">
-                  {/* <FormattedMessage id="homeheader.choosefacility" /> */}
                 </div>
-              </div>
+              </div> */}
 
-              <div className="child-content">
+        {/* <div className="child-content">
                 <div>
                   <b>
                     <FormattedMessage id="homeheader.doctor" />
                   </b>
                 </div>
                 <div className="subs-title">
-                  {/* <FormattedMessage id="homeheader.choosedoctor" /> */}
                 </div>
-              </div>
+              </div> */}
 
-              <div className="child-content">
+        {/* <div className="child-content">
                 <div>
                   <b>
                     <FormattedMessage id="homeheader.package" />
                   </b>
                 </div>
                 <div className="subs-title">
-                  {/* <FormattedMessage id="homeheader.generalcheck" /> */}
+                 
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            {/* ============================ right block */}
-            <div className="right-content">
+        {/* <div className="right-content">
               <div className="support">
                 <i className="fas fa-question-circle"></i>
                 <FormattedMessage id="homeheader.help" />
@@ -95,9 +91,9 @@ class HomeHeader extends Component {
                     language === LANGUAGES.VI
                       ? "language-vi active"
                       : "language-vi"
-                  }
-                >
-                  <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>
+                  } */}
+
+        {/* <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>
                     VI
                   </span>
                 </div>
@@ -117,16 +113,16 @@ class HomeHeader extends Component {
                     language === LANGUAGES.JA
                       ? "language-ja active"
                       : "language-ja"
-                  }
-                >
-                  <span onClick={() => this.changeLanguage(LANGUAGES.JA)}>
+                  } */}
+
+        {/* <span onClick={() => this.changeLanguage(LANGUAGES.JA)}>
                     JA
                   </span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="home-header-banner">
           <div className="content-top">

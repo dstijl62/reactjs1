@@ -4,12 +4,12 @@ import "./specialty.scss";
 
 import { FormattedMessage } from "react-intl";
 
-import { doctor1 } from "../../../assets/specialty/specialty-icon";
+import { doctor1 } from "../../../assets/ourDoctor/ourDoctor-img";
 
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-class Specialty extends Component {
+class OurDoctor extends Component {
   render() {
     let settings = {
       dots: false,
@@ -24,7 +24,7 @@ class Specialty extends Component {
         <div className="container">
           {/* =================== HEADER =================== */}
           <div className="team-header">
-            <h2 className="section-heading">Chuyên khoa phổ biến</h2>
+            <h2 className="section-heading">Bác Sĩ Nổi Bật Tuần Qua</h2>
             <a href="#!" className="btn team__cta">
               Xem thêm
             </a>
@@ -115,4 +115,4 @@ const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default connect(mapStateToProps, mapDispatchToProps)(OurDoctor);

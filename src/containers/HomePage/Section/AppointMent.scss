@@ -1,0 +1,52 @@
+/* ================================ Appointment ============================ */
+
+.appointment {
+  margin-top: 85px;
+}
+
+.appointment__inner {
+  padding: 100px 178px;
+  background: #f6fbff;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Gạch dưới heading */
+.appointment__heading::after {
+  content: "";
+  display: block;
+  width: 136px;
+  height: 2px;
+  background: #2e80ce;
+  margin: 18px auto 0;
+}
+
+/* Mô tả */
+.appointment__desc {
+  margin: 18px auto 0;
+  max-width: 617px;
+  color: #575f66;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+/* Nút */
+.appointment__btn {
+  margin-top: 38px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 160px;
+  height: 48px;
+  border-radius: 999px;
+  background: #2e80ce;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.appointment__btn:hover {
+  opacity: 0.9;
+}

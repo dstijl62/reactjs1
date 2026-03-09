@@ -147,12 +147,12 @@ a {
 }
 
 /* Khung chứa ảnh */
-.team-item__img-bg {
-  border-radius: 6px;
-  background: #eaf6ff;
+.mfacility-item__img-bg {
+  // border-radius: 6px;
+  // background: #eaf6ff;
   padding-top: 28px;
   overflow: hidden;
-  height: 350px;
+  height: 280px;
 
   display: flex;
   justify-content: center;
@@ -160,15 +160,15 @@ a {
 }
 
 /* Ảnh */
-.team-item__img-bg img {
-  width: 100%;
+.mfacility-item__img-bg img {
+  width: auto;
   height: 100%;
   object-fit: cover;
   transition: 0.5s;
 }
 
 /* Hover phóng to ảnh */
-.team-item:hover .team-item__img-bg img {
+.team-item:hover .mfacility-item__img-bg img {
   transform: scale(1.1);
 }
 

@@ -124,6 +124,7 @@
 // ==================== banner
 
 .home-header-banner {
+  margin-top: 80px;
   background-image: url("../../assets/images/bg-banner.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -170,7 +171,7 @@
       margin: 0 auto;
       padding: 10px;
       border-radius: 999px;
-      background: rgba(247, 216, 0, 0.65);
+      background: rgba(250, 249, 247, 0.808);
 
       i {
         margin: 0 5px;
@@ -188,6 +189,7 @@
   .content-bottom {
     // border: 1px solid green;
     height: 40%;
+    padding-bottom: 30px;
 
     display: flex;
     align-items: flex-end;

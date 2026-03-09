@@ -1,0 +1,70 @@
+/* ================================ INSTALL MOBILE =============================== */
+
+.install {
+  margin-top: 120px;
+}
+
+.install__inner {
+  margin: 180px 0 85px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 70px;
+  height: 427px;
+
+  border-radius: 4px;
+  background: #2e80ce;
+  //   overflow: hidden; /* tránh ảnh tràn ra ngoài */
+}
+
+/* LEFT IMAGE */
+.install__img {
+  width: 284px;
+  height: 522px;
+  object-fit: cover;
+
+  position: absolute;
+  bottom: 0;
+}
+
+/* RIGHT CONTENT */
+.install__content {
+  max-width: 586px;
+  margin-left: auto; /* đẩy content sang phải */
+  color: #fff;
+}
+
+.install__heading {
+  color: #fff;
+  max-width: 510px;
+}
+
+.install__desc {
+  margin-top: 18px;
+  max-width: 586px;
+
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.67;
+}
+
+.install__row {
+  margin-top: 38px;
+  display: flex;
+  column-gap: 28px;
+  align-items: center;
+}
+
+.install__btn-img {
+  width: 162px;
+  height: auto;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.install__btn-img:hover {
+  opacity: 0.85;
+}

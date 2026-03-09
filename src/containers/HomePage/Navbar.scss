@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Đặt biến */
+
+:root {
+  --header-bg: #10375c;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Sora", sans-serif;
+}
+
+/* ===================== Phần common ================= */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.container {
+  width: 1170px;
+
+  margin: 0 auto;
+  max-width: calc(100% - 48px);
+}
+
+a {
+  text-decoration: none;
+}
+
+.header__action--signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // display: inline-block;
+  width: 125px;
+  height: 36px;
+  border-radius: 999px;
+  background: #2e80ce;
+  font-weight: 400;
+  font-size: 1.8rem;
+  font-style: normal;
+  // text-align: center;
+
+  cursor: pointer;
+
+  color: #ffffff;
+  color: #fff;
+  transition: 0.25s;
+}
+
+.header__action--signup:hover {
+  opacity: 0.9;
+}
+
+.section-heading {
+  color: #10375c;
+  font-weight: 600;
+  font-size: 5rem;
+  line-height: 1.2;
+  letter-spacing: -1;
+}
+
+.section-desc {
+  margin-top: 18px;
+  color: #575f66;
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+/* control btn */
+.control {
+  display: flex;
+  column-gap: 18px;
+  align-items: center;
+}
+
+// .control__btn {
+//   width: 36px;
+//   height: 36px;
+//   border-radius: 50%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   border: 1px solid #575f66;
+//   background: #fff;
+//   cursor: pointer;
+
+//   transition: 0.25s;
+// }
+
+// .control__btn:hover {
+//   background: #2e80ce;
+//   border: #2e80ce;
+//   color: #fff;
+// }
+
+// .control-icon--next {
+//   rotate: 180deg;
+// }
+
+/* ====================== code cho phần header ================== */
+
+.header {
+  padding-top: 20px;
+  background: var(--header-bg);
+  height: 80px;
+  // min-height: 100vh;
+  // position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* top row */
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* navigation */
+.navbar__list {
+  display: flex;
+}
+
+.header__action--login,
+.navbar__link {
+  padding: 8px 21px;
+  color: #c9d2da;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #ffffff;
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__link--active::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  position: relative;
+  right: 8px;
+  top: -3px;
+}
+
+/* CTA buttons */
+.header__action {
+  display: flex;
+  align-items: center;
+}
+
+.header__action--login {
+  margin-right: 7px;
+}
+
+.header__action--login:hover {
+  color: #ffffff;
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.navbar__list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.navbar__item {
+  list-style: none;
+}
+
+/* ====================== Language Switcher (thêm mới) ================== */
+
+.language {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  column-gap: 10px;
+}
+
+.language-vi,
+.language-en,
+.language-ja {
+  cursor: pointer;
+  font-size: 1.6rem;
+  color: #c9d2da;
+  transition: 0.2s;
+}
+
+.language-vi.active,
+.language-en.active,
+.language-ja.active {
+  color: #ffffff;
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.language span:hover {
+  color: #ffffff;
+  text-shadow: 1px 0 0 currentColor;
+}
