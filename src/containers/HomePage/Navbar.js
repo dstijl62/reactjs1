@@ -54,7 +54,7 @@ class Navbar extends Component {
 
             {/* CTA + Language */}
             <div className="header__action">
-              <a href="#!" className="header__action--login">
+              <a href="/login" className="header__action--login">
                 Log In
               </a>
               <a href="#!" className="btn header__action--signup">
