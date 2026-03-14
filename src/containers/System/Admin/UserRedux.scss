@@ -14,7 +14,7 @@
 
 .form-label {
   display: block;
-  padding: 5px 0px;
+  padding: 5px 10px;
   font-size: 1.6rem;
   border-radius: 6px;
 }
@@ -28,4 +28,51 @@
   padding-left: 32px;
   padding-right: 32px;
   font-size: 12px;
+}
+
+// =================
+.upload-btn {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 4px;
+  background: #fff;
+  // color: #2e80ce;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  i {
+    margin-left: 6px;
+    font-size: 16px;
+  }
+
+  &:hover {
+    background: #2e80ce;
+    color: #fff;
+  }
+}
+
+.preview-image-btn {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 4px;
+  background: #fff;
+  // color: #2e80ce;
+  border: 1px solid #e6e6e6;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+
+  background: center center no-repeat;
+  background-size: cover;
+
+  i {
+    margin-left: 6px;
+  }
+
+  &:hover {
+    // background: #2e80ce;
+    color: #fff;
+  }
 }

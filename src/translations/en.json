@@ -49,6 +49,7 @@
     "address": "Address",
     "city": "City",
     "gender": "Gender",
+    "position": "Position",
     "role": "Role",
     "image": "Image",
     "checkbox": "Check me out",
