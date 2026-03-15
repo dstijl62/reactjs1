@@ -53,6 +53,7 @@
     "role": "Role",
     "image": "Image",
     "checkbox": "Check me out",
-    "submit": "Submit"
+    "submit": "Submit",
+    "edit": "Save"
   }
 }

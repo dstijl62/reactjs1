@@ -12,6 +12,7 @@ import ModalUser from "./ModalUser";
 import ModalEditUser from "./ModalEditUser";
 import { emitter } from "../../utils/emitter";
 // import { reject } from "lodash";
+import { toast } from "react-toastify";
 
 class UserManage extends Component {
   //   state = {};
@@ -61,6 +62,7 @@ class UserManage extends Component {
     // alert("call me");
     try {
       let response = await createNewUserService(data);
+      toast.success("Create A New User Succeed!");
       if (response && response.errCode !== 0) {
         alert(response.errMessage);
       } else {
@@ -82,6 +84,7 @@ class UserManage extends Component {
     try {
       let response = await deleteUserService(user.id);
       if (response && response.errCode === 0) {
+        toast.success("Delete The User Succeed!");
         await this.getAllUsersFromReact();
       } else {
         alert(response.errMessage);

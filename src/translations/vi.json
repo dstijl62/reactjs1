@@ -49,10 +49,11 @@
     "address": "Địa chỉ",
     "city": "Thành phố",
     "gender": "Giới tính",
-    "position": "Vị trí",
+    "position": "Chức danh",
     "role": "Vai trò",
     "image": "Hình ảnh",
     "checkbox": "Xác nhận",
-    "submit": "Xác nhận"
+    "submit": "Xác nhận",
+    "edit": "Lưu thay đổi"
   }
 }

@@ -67,7 +67,7 @@ class App extends Component {
                 </Switch>
               </CustomScrollbars>
             </div>
-
+            {/* 
             <ToastContainer
               className="toast-container"
               toastClassName="toast-item"
@@ -79,6 +79,20 @@ class App extends Component {
               closeOnClick={false}
               draggable={false}
               closeButton={<CustomToastCloseButton />}
+            /> */}
+
+            <ToastContainer
+              position="bottom-right"
+              autoClose={3000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick={false}
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="colored"
+              // transition={Bounce}
             />
           </div>
         </Router>
