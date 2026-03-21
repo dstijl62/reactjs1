@@ -9,11 +9,39 @@ import { doctor1 } from "../../../assets/ourDoctor/ourDoctor-img";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import { LANGUAGES } from "../../../utils";
+
+import * as actions from "../../../store/actions";
+
 class OurDoctor extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      arrDoctors: [],
+    };
+  }
+
+  componentDidUpdate(preProps, prevState, snapshot) {
+    if (preProps.topDoctorsRedux !== this.props.topDoctorsRedux) {
+      this.setState({
+        arrDoctors: this.props.topDoctorsRedux,
+      });
+    }
+  }
+
+  componentDidMount() {
+    this.props.loadTopDoctors();
+  }
   render() {
+    let arrDoctors = this.state.arrDoctors;
+    let { language } = this.props;
+    // arrDoctors = arrDoctors.concat(arrDoctors).concat(arrDoctors);
+    console.log(" check topDoctorsRedux: ", this.props.topDoctorsRedux);
+
     let settings = {
       dots: false,
-      infinite: true,
+      infinite: false,
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -24,78 +52,44 @@ class OurDoctor extends Component {
         <div className="container">
           {/* =================== HEADER =================== */}
           <div className="team-header">
-            <h2 className="section-heading">Bác Sĩ Nổi Bật Tuần Qua</h2>
+            <h2 className="section-heading">
+              <FormattedMessage id="homepage.out-standing-doctor" />
+            </h2>
             <a href="#!" className="btn team__cta">
-              Xem thêm
+              <FormattedMessage id="homepage.more-infor" />
             </a>
           </div>
 
           {/* =================== BODY =================== */}
           <div className="team__list">
             <Slider {...settings}>
-              {/* ITEM 1 */}
-              <article className="team-item">
-                <div className="team-item__img-bg">
-                  <img src={doctor1} alt="Dentist" />
-                </div>
-                <h3 className="team-item__name">Cơ xương khớp</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
-
-              {/* ITEM 2 */}
-              <article className="team-item">
-                <div className="team-item__img-bg">
-                  <img src={doctor1} alt="Dentist" />
-                </div>
-                <h3 className="team-item__name">Dr. Essence Page</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
-
-              {/* ITEM 3 */}
-              <article className="team-item">
-                <div className="team-item__img-bg">
-                  <img src={doctor1} alt="Dentist" />
-                </div>
-                <h3 className="team-item__name">Dr. Essence Page</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
-
-              {/* ITEM 4 */}
-              <article className="team-item">
-                <div className="team-item__img-bg">
-                  <img src={doctor1} alt="Dentist" />
-                </div>
-                <h3 className="team-item__name">Dr. Essence Page</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
-              {/* ITEM 5 */}
-              <article className="team-item">
-                <div className="team-item__img-bg">
-                  <img src={doctor1} alt="Dentist" />
-                </div>
-                <h3 className="team-item__name">Dr. Essence Page</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
-              {/* ITEM 6 */}
-              <article className="team-item">
-                <div className="team-item__img-bg">
-                  <img src={doctor1} alt="Dentist" />
-                </div>
-                <h3 className="team-item__name">Dr. Essence Page</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
+              {arrDoctors &&
+                arrDoctors.length > 0 &&
+                arrDoctors.map((item, index) => {
+                  let imageBase64 = "";
+                  if (item.image) {
+                    imageBase64 = new Buffer(item.image, "base64").toString(
+                      "binary",
+                    );
+                  }
+                  let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName}`;
+                  let nameEn = `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`;
+                  return (
+                    <article className="team-item">
+                      <div className="team-item__img-bg">
+                        <img
+                          src={imageBase64}
+                          alt="Dentist"
+                          className="doctor-img"
+                        />
+                      </div>
+                      <h3 className="team-item__name">Cơ xương khớp</h3>
+                      <p className="team-item__desc">
+                        {language === LANGUAGES.VI ? nameVi : nameEn}
+                      </p>
+                    </article>
+                  );
+                })}
             </Slider>
           </div>
         </div>
@@ -108,11 +102,14 @@ const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.user.isLoggedIn,
     language: state.app.language,
+    topDoctorsRedux: state.admin.topDoctors,
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {};
+  return {
+    loadTopDoctors: () => dispatch(actions.fetchTopDoctor()),
+  };
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(OurDoctor);

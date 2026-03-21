@@ -215,6 +215,10 @@ a {
   right: -10px !important;
 }
 
+.slick-disabled {
+  display: none !important;
+}
+
 /* ===== Icon SVG chung ===== */
 .slick-prev::before,
 .slick-next::before {

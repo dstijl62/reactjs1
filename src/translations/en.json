@@ -55,5 +55,10 @@
     "checkbox": "Check me out",
     "submit": "Submit",
     "edit": "Save"
+  },
+
+  "homepage": {
+    "out-standing-doctor": "Out Standing Doctor",
+    "more-infor": "More information"
   }
 }
