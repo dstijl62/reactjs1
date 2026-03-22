@@ -65,6 +65,14 @@
     "out-standing-doctor": "Bác Sĩ Nổi Bật Tuần Qua",
     "more-infor": "Xem thêm"
   },
+
+  "manage-schedule": {
+    "title": "Quản lý kế hoạch khám bệnh của bác sĩ",
+    "select-doctor": "Chọn bác sĩ",
+    "select-date": "Chọn ngày giờ",
+    "confirm": "Lưu thông tin"
+  },
+
   "menu.language.title": "LA",
   "menu.language.vietnamese": "VI",
   "menu.language.english": "EN",

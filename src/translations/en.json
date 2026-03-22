@@ -65,6 +65,13 @@
     "more-infor": "More information"
   },
 
+  "manage-schedule": {
+    "title": "Doctor's appointment schedule management",
+    "select-doctor": "Select doctor",
+    "select-date": "Select date & time",
+    "confirm": "Save schedule"
+  },
+
   "menu.language.title": "LA",
   "menu.language.vietnamese": "VI",
   "menu.language.english": "EN",
