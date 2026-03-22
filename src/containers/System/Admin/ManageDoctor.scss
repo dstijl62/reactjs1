@@ -26,31 +26,6 @@ th {
   color: white;
 }
 
-.btn-edit {
-  width: 30px;
-  //   height: 30px;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: gray;
-
-  &:hover {
-    background-color: transparent !important;
-  }
-}
-
-.btn-delete {
-  width: 50px;
-  border: none;
-  outline: none;
-  background: transparent;
-  color: gray;
-
-  &:hover {
-    background-color: transparent !important;
-  }
-}
-
 // ============================
 
 .manage-doctor-container {
@@ -79,7 +54,15 @@ th {
   }
 }
 
-.btn-submit {
+.btn-save-doctor {
+  margin-top: 20px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 12px;
+  background: orange;
+  color: #333;
+}
+.btn-create-doctor {
   margin-top: 20px;
   padding-left: 32px;
   padding-right: 32px;

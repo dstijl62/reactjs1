@@ -4,10 +4,17 @@ import { logo } from "../../assets/images/logo";
 import { LANGUAGES } from "../../utils";
 import { changeLanguageApp } from "../../store/actions/appActions";
 import "./Navbar.scss";
+import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
 
 class Navbar extends Component {
   changeLanguage = (language) => {
     this.props.changeLanguageAppRedux(language);
+  };
+
+  returnToHome = () => {
+    if (this.props.history) {
+      this.props.history.push(`/home`);
+    }
   };
 
   render() {
@@ -20,7 +27,12 @@ class Navbar extends Component {
           <div className="header-top">
             {/* logo */}
             <a href="#!">
-              <img src={logo} alt="shine smile" className="logo" />
+              <img
+                src={logo}
+                alt="shine smile"
+                className="logo"
+                onClick={() => this.returnToHome()}
+              />
             </a>
 
             {/* Navigation */}
@@ -62,8 +74,8 @@ class Navbar extends Component {
               </a>
 
               {/* ==================== Language Switcher ==================== */}
-              <div className="language">
-                {/* <div
+              {/* <div className="language">
+                <div
                   className={
                     language === LANGUAGES.VI
                       ? "language-vi active"
@@ -73,7 +85,7 @@ class Navbar extends Component {
                   <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>
                     VI
                   </span>
-                </div> */}
+                </div>
 
                 <div
                   className={
@@ -98,6 +110,20 @@ class Navbar extends Component {
                     JA
                   </span>
                 </div>
+              </div> */}
+
+              {/* ============================== DropDown */}
+              <div className="navbar-language-menu white">
+                <div className="language-title">
+                  {{ vi: "VI", en: "EN", ja: "JA" }[language] || "VI"}
+                  <i className="fas fa-angle-down"></i>
+                </div>
+
+                <ul className="language-dropdown">
+                  <li onClick={() => this.changeLanguage(LANGUAGES.VI)}>VI</li>
+                  <li onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</li>
+                  <li onClick={() => this.changeLanguage(LANGUAGES.JA)}>JA</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -119,4 +145,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Navbar));

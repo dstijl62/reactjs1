@@ -118,8 +118,8 @@ class Login extends Component {
                   <i
                     className={
                       this.state.isShowPassword
-                        ? "fas fa-eye-slash"
-                        : "fas fa-eye"
+                        ? "fas fa-eye-slashh"
+                        : "fas fa-eyee"
                     }
                   ></i>
                 </span>

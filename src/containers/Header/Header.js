@@ -3,19 +3,48 @@ import { connect } from "react-redux";
 
 import * as actions from "../../store/actions";
 import Navigator from "../../components/Navigator";
-import { adminMenu } from "./menuApp";
+import { adminMenu, doctorMenu } from "./menuApp";
 import "./Header.scss";
 
-import { LANGUAGES } from "../../utils";
+import { LANGUAGES, USER_ROLE } from "../../utils";
 
 import { FormattedMessage } from "react-intl";
 
 import { changeLanguageApp } from "../../store/actions";
+import _ from "lodash";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      menuApp: [],
+    };
+  }
   handleChangeLanguage = (language) => {
     this.props.changeLanguageAppRedux(language);
   };
+
+  componentDidMount() {
+    let { userInfo } = this.props;
+    let menu = [];
+
+    if (userInfo && !_.isEmpty(userInfo)) {
+      let role = userInfo.roleId;
+      if (role === USER_ROLE.ADMIN) {
+        menu = adminMenu;
+      }
+
+      if (role === USER_ROLE.DOCTOR) {
+        menu = doctorMenu;
+      }
+    }
+
+    this.setState({
+      menuApp: menu,
+    });
+    console.log(" Get userinfor: ", this.props.userInfo);
+  }
+
   render() {
     const { processLogout, language, userInfo } = this.props;
     console.log("check userInfo: ", userInfo);
@@ -24,7 +53,7 @@ class Header extends Component {
       <div className="header-container">
         {/* thanh navigator */}
         <div className="header-tabs-container">
-          <Navigator menus={adminMenu} />
+          <Navigator menus={this.state.menuApp} />
         </div>
 
         <div className="languages">
@@ -32,7 +61,28 @@ class Header extends Component {
             <FormattedMessage id="homeheader.welcome" />,
             {userInfo && userInfo.firstName ? userInfo.firstName : ""}
           </span>
-          <span
+          {/* ============================== */}
+          <div className="header-language-menu">
+            <div className="language-title">
+              {{ vi: "VI", en: "EN", ja: "JA" }[language] || "LA"}
+              <i className="fas fa-angle-down"></i>
+            </div>
+
+            <ul className="language-dropdown">
+              <li onClick={() => this.props.changeLanguageAppRedux("vi")}>
+                VN
+              </li>
+              <li onClick={() => this.props.changeLanguageAppRedux("en")}>
+                EN
+              </li>
+              <li onClick={() => this.props.changeLanguageAppRedux("ja")}>
+                JA
+              </li>
+            </ul>
+          </div>
+
+          {/* ======================= */}
+          {/* <span
             className={
               language === LANGUAGES.VI ? "language-vi active" : "language-vi"
             }
@@ -47,7 +97,7 @@ class Header extends Component {
             onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}
           >
             EN
-          </span>
+          </span> */}
 
           {/* nút logout */}
           <div

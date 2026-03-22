@@ -138,7 +138,12 @@
       "assign-service-package-to-customer-fail": "Fail to assign service package to customer",
       "remove-assign-success": "Unassign service package to customer successfully",
       "remove-assign-fail": "Fail to unassign service package to customer",
-      "sure-delete-assign": "Are you sure to unassign service package to customer?"
+      "sure-delete-assign": "Are you sure to unassign service package to customer?",
+
+      "menu.language.title": "LA",
+      "menu.language.vietnamese": "VI",
+      "menu.language.english": "EN",
+      "menu.language.japanese": "JA"
     }
   }
 }

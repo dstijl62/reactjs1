@@ -37,6 +37,9 @@
       "manage-specialty": "Manage specialty",
       "handbook": "Handbook",
       "manage-handbook": "Manage handbook"
+    },
+    "doctor": {
+      "manage-schedule": "Quản lý kế hoạch khám bệnh"
     }
   },
   "manageuser-form": {
@@ -60,5 +63,10 @@
   "homepage": {
     "out-standing-doctor": "Out Standing Doctor",
     "more-infor": "More information"
-  }
+  },
+
+  "menu.language.title": "LA",
+  "menu.language.vietnamese": "VI",
+  "menu.language.english": "EN",
+  "menu.language.japanese": "JA"
 }

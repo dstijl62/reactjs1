@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import "./specialty.scss";
+import "./OurDoctor.scss";
 
 import { FormattedMessage } from "react-intl";
 
@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { LANGUAGES } from "../../../utils";
+import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
 
 import * as actions from "../../../store/actions";
 
@@ -33,6 +34,13 @@ class OurDoctor extends Component {
   componentDidMount() {
     this.props.loadTopDoctors();
   }
+
+  handleViewDetailDoctor = (doctor) => {
+    console.log(" Check view infor: ", doctor);
+    if (this.props.history) {
+      this.props.history.push(`/detail-doctor/${doctor.id}`);
+    }
+  };
   render() {
     let arrDoctors = this.state.arrDoctors;
     let { language } = this.props;
@@ -75,8 +83,11 @@ class OurDoctor extends Component {
                   let nameVi = `${item.positionData.valueVi}, ${item.lastName} ${item.firstName}`;
                   let nameEn = `${item.positionData.valueEn}, ${item.firstName} ${item.lastName}`;
                   return (
-                    <article className="team-item">
-                      <div className="team-item__img-bg">
+                    <article
+                      className="team-item"
+                      onClick={() => this.handleViewDetailDoctor(item)}
+                    >
+                      <div className="team-item__img-bg doctor-slider-img">
                         <img
                           src={imageBase64}
                           alt="Dentist"
@@ -112,4 +123,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(OurDoctor);
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(OurDoctor),
+);

@@ -37,7 +37,11 @@
       "manage-specialty": "Quản lý chuyên khoa",
       "handbook": "Cẩm nang",
       "manage-handbook": "Quản lý cẩm nang"
-    }
+    },
+    "doctor": {
+      "manage-schedule": "Quản lý kế hoạch khám bệnh"
+    },
+    "language": {}
   },
   "manageuser-form": {
     "add-user": "Thêm mới người dùng:",
@@ -60,5 +64,9 @@
   "homepage": {
     "out-standing-doctor": "Bác Sĩ Nổi Bật Tuần Qua",
     "more-infor": "Xem thêm"
-  }
+  },
+  "menu.language.title": "LA",
+  "menu.language.vietnamese": "VI",
+  "menu.language.english": "EN",
+  "menu.language.japanese": "JA"
 }
