@@ -24,7 +24,7 @@ class HowItworks extends Component {
           <div className="work__list">
             {/* =============== work item 1 ========== */}
             <section className="work-item">
-              <img src={search} alt="Dentist" class="work-item__icon" />
+              <img src={search} alt="Dentist" className="work-item__icon" />
               <h3 className="work-item__heading">Search doctor</h3>
               <p className="work-item__desc">
                 Search a doctor by education, qualifications or experience —
@@ -37,7 +37,7 @@ class HowItworks extends Component {
 
             {/* =============== work item 2 ========== */}
             <section className="work-item">
-              <img src={finduser} alt="Dentist" class="work-item__icon" />
+              <img src={finduser} alt="Dentist" className="work-item__icon" />
               <h3 className="work-item__heading">Find best doctor</h3>
               <p className="work-item__desc">
                 Search a doctor by education, qualifications or experience —
@@ -50,7 +50,11 @@ class HowItworks extends Component {
 
             {/* =============== work item 3 ========== */}
             <section className="work-item">
-              <img src={firstaidkit} alt="Dentist" class="work-item__icon" />
+              <img
+                src={firstaidkit}
+                alt="Dentist"
+                className="work-item__icon"
+              />
               <h3 className="work-item__heading">Get treatment</h3>
               <p className="work-item__desc">
                 Search a doctor by education, qualifications or experience —

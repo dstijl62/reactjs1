@@ -72,6 +72,22 @@
     "confirm": "Save schedule"
   },
 
+  "patient": {
+    "detail-doctor": {
+      "schedule": "Schedule"
+    }
+  },
+
+  "admin": {
+    "manage-doctor": {
+      "title": "Add doctor information",
+      "select-doctor": "Select doctor",
+      "intro": "Introduction:",
+      "save-info": "Save information",
+      "create-info": "Create information"
+    }
+  },
+
   "menu.language.title": "LA",
   "menu.language.vietnamese": "VI",
   "menu.language.english": "EN",

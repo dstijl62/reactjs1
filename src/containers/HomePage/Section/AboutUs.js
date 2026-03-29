@@ -12,8 +12,12 @@ class AboutUs extends Component {
             {/* about left */}
             <div className="about__media">
               <figure className="about__img">
-                <img src={dentist1} alt="Dentist" class="about__img--big" />
-                <img src={dentist2} alt="Dentist" class="about__img--small" />
+                <img src={dentist1} alt="Dentist" className="about__img--big" />
+                <img
+                  src={dentist2}
+                  alt="Dentist"
+                  className="about__img--small"
+                />
               </figure>
             </div>
 

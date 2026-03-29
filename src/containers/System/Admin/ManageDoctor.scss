@@ -26,8 +26,6 @@ th {
   color: white;
 }
 
-// ============================
-
 .manage-doctor-container {
   padding: 20px;
 
@@ -39,18 +37,13 @@ th {
     font-weight: 600;
   }
 
+  /* KHÔNG override row nữa */
   .more-infor {
-    display: flex;
-    gap: 15px;
     margin-bottom: 20px;
+  }
 
-    .content-left {
-      width: 40%;
-    }
-
-    .content-right {
-      width: 60%;
-    }
+  .more-infor-extra {
+    margin-bottom: 20px;
   }
 }
 
@@ -62,6 +55,7 @@ th {
   background: orange;
   color: #333;
 }
+
 .btn-create-doctor {
   margin-top: 20px;
   padding-left: 32px;

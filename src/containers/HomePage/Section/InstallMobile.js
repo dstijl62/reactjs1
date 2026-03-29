@@ -15,7 +15,7 @@ class InstallMobile extends Component {
           <div className="install__inner">
             {/* install left */}
             <figure>
-              <img src={Rectangle} alt="Dentist" class="install__img" />
+              <img src={Rectangle} alt="Dentist" className="install__img" />
             </figure>
 
             {/* install right */}
@@ -34,12 +34,16 @@ class InstallMobile extends Component {
                   <img
                     src={GooglePlay}
                     alt="Dentist"
-                    class="install__btn-img"
+                    className="install__btn-img"
                   />
                 </a>
 
                 <a href="#!">
-                  <img src={AppStore} alt="Dentist" class="install__btn-img" />
+                  <img
+                    src={AppStore}
+                    alt="Dentist"
+                    className="install__btn-img"
+                  />
                 </a>
               </div>
             </section>

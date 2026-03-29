@@ -73,6 +73,22 @@
     "confirm": "Lưu thông tin"
   },
 
+  "patient": {
+    "detail-doctor": {
+      "schedule": "Lịch khám"
+    }
+  },
+
+  "admin": {
+    "manage-doctor": {
+      "title": "Tạo thêm thông tin doctors",
+      "select-doctor": "Chọn bác sĩ",
+      "intro": "Thông tin giới thiệu:",
+      "save-info": "Lưu thông tin",
+      "create-info": "Tạo thông tin"
+    }
+  },
+
   "menu.language.title": "LA",
   "menu.language.vietnamese": "VI",
   "menu.language.english": "EN",

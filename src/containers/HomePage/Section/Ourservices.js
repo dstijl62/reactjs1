@@ -19,9 +19,9 @@ class Ourservices extends Component {
           <div className="service__row">
             {/* service left */}
             <figure>
-              {/* <img src={dentist2} alt="Dentist" class="service__img" /> */}
+              {/* <img src={dentist2} alt="Dentist" className="service__img" /> */}
               <iframe
-                class="service__img"
+                className="service__img"
                 width="993"
                 height="240"
                 src="https://www.youtube.com/embed/5DUXdmoVAGA?list=PLhThj1C8DuL1uJUov1bFJX0HEl_uJY-U8"

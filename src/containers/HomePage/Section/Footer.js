@@ -14,7 +14,7 @@ class Footer extends Component {
             {/* column 1 */}
             <div className="footer__column">
               <a target="blank" href="https://github.com/">
-                <img src={logo} alt="shine smile" class="logo" />
+                <img src={logo} alt="shine smile" className="logo" />
               </a>
 
               <p className="footer__desc">

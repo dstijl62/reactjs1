@@ -80,7 +80,7 @@ class Blogs extends Component {
                     <img
                       src={vaccine1}
                       alt="Dentist"
-                      class="blog-item__thumb"
+                      className="blog-item__thumb"
                     />
                   </figure>
 
@@ -106,7 +106,7 @@ class Blogs extends Component {
                     <img
                       src={vaccine2}
                       alt="Dentist"
-                      class="blog-item__thumb"
+                      className="blog-item__thumb"
                     />
                   </figure>
 
@@ -132,7 +132,7 @@ class Blogs extends Component {
                     <img
                       src={vaccine3}
                       alt="Dentist"
-                      class="blog-item__thumb"
+                      className="blog-item__thumb"
                     />
                   </figure>
 
@@ -158,7 +158,7 @@ class Blogs extends Component {
                     <img
                       src={vaccine1}
                       alt="Dentist"
-                      class="blog-item__thumb"
+                      className="blog-item__thumb"
                     />
                   </figure>
 
