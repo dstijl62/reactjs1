@@ -75,7 +75,23 @@
 
   "patient": {
     "detail-doctor": {
-      "schedule": "Lịch khám"
+      "schedule": "Lịch khám",
+      "no-schedule": "Bác sĩ không có lịch hẹn trong thời gian này, vui lòng chọn thời gian khác",
+      "choose": "Chọn",
+      "book-free": "và đặt lịch miễn phí"
+    },
+
+    "booking-modal": {
+      "title": "Thông tin đặt lịch khám bệnh",
+      "fullname": "Họ và tên",
+      "phonenumber": "Số điện thoại",
+      "email": "Địa chỉ email",
+      "address": "Địa chỉ liên hệ",
+      "reason": "Lý do khám",
+      "birthday": "Ngày sinh",
+      "gender": "Giới tính",
+      "agree": "Thanh toán sau tại cơ sở y tế",
+      "confirm": "Xác nhận"
     }
   },
 

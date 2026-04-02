@@ -75,6 +75,18 @@
   "patient": {
     "detail-doctor": {
       "schedule": "Schedule"
+    },
+    "booking-modal": {
+      "title": "Medical Appointment Information",
+      "fullname": "Full Name",
+      "phonenumber": "Phone Number",
+      "email": "Email Address",
+      "address": "Contact Address",
+      "reason": "Reason for Visit",
+      "birthday": "Date of Birth",
+      "gender": "Gender",
+      "agree": "Pay later at the medical facility",
+      "confirm": "Confirm"
     }
   },
 

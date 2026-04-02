@@ -5,3 +5,8 @@
 .right {
   float: right;
 }
+
+.gender-select .react-select__control {
+  min-height: 30px !important; // giảm chiều cao
+  height: 30px !important;
+}
