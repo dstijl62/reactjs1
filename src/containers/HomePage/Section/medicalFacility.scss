@@ -87,11 +87,11 @@ a {
 
 /* =============================== TEAM SECTION ====================== */
 
-.team {
+.clinic {
   padding: 85px 0;
 }
 
-.team-header {
+.clinic-header {
   text-align: center;
   margin: 0 auto;
 
@@ -101,7 +101,7 @@ a {
     color: #10375c;
   }
 
-  .team__cta {
+  .clinic__cta {
     margin-top: 20px;
     display: inline-flex; /* căn giữa chữ theo cả 2 chiều */
     justify-content: center;
@@ -122,14 +122,14 @@ a {
     transition: 0.25s;
   }
 
-  .team__cta:hover {
+  .clinic__cta:hover {
     opacity: 0.9;
   }
 }
 
 /* =============================== SLIDER LIST ====================== */
 
-.team__list {
+.clinic__list {
   margin-top: 50px;
 
   /* Khoảng cách giữa các slide */
@@ -141,7 +141,7 @@ a {
 
 /* =============================== TEAM ITEM ====================== */
 
-.team-item {
+.clinic-item {
   cursor: pointer;
   text-align: center;
 }
@@ -168,12 +168,12 @@ a {
 }
 
 /* Hover phóng to ảnh */
-.team-item:hover .mfacility-item__img-bg img {
+.clinic-item:hover .mfacility-item__img-bg img {
   transform: scale(1.1);
 }
 
 /* Tên bác sĩ */
-.team-item__name {
+.clinic-item__name {
   margin-top: 12px;
   color: #10375c;
   font-size: 1.6rem;
@@ -182,7 +182,7 @@ a {
 }
 
 /* Mô tả */
-.team-item__desc {
+.clinic-item__desc {
   color: #575f66;
   font-size: 1.4rem;
   font-weight: 300;

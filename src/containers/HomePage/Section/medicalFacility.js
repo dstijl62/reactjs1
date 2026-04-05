@@ -9,7 +9,33 @@ import { medicalFacility1 } from "../../../assets/medicalFacility/medicalFacilit
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { getAllClinic } from "../../../services/userService";
+import { withRouter } from "react-router-dom/cjs/react-router-dom.min";
+
 class medicalFacility extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      dataClinics: [],
+    };
+  }
+
+  async componentDidMount() {
+    let res = await getAllClinic();
+    console.log(" check response getAllClinic: ", res);
+    if (res && res.errCode === 0) {
+      this.setState({
+        dataClinics: res.data ? res.data : [],
+      });
+    }
+  }
+
+  handleViewDetailClinic = (clinic) => {
+    if (this.props.history) {
+      this.props.history.push(`/detail-clinic/${clinic.id}`);
+    }
+  };
+
   render() {
     let settings = {
       dots: false,
@@ -19,83 +45,41 @@ class medicalFacility extends Component {
       slidesToScroll: 1,
     };
 
+    let { dataClinics } = this.state;
+
     return (
-      <section className="team">
+      <section className="clinic">
         <div className="container">
           {/* =================== HEADER =================== */}
-          <div className="team-header">
+          <div className="clinic-header">
             <h2 className="section-heading">Cơ Sở Y Tế Nổi Bật</h2>
-            <a href="#!" className="btn team__cta">
+            <a href="#!" className="btn clinic__cta">
               Xem thêm
             </a>
           </div>
 
           {/* =================== BODY =================== */}
-          <div className="team__list">
+          <div className="clinic__list">
             <Slider {...settings}>
-              {/* ITEM 1 */}
-              <article className="team-item">
-                <div className="mfacility-item__img-bg">
-                  <img src={medicalFacility1} alt="medicalFacility1" />
-                </div>
-                <h3 className="team-item__name">Cơ xương khớp</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
-
-              {/* ITEM 2 */}
-              <article className="team-item">
-                <div className="mfacility-item__img-bg">
-                  <img src={medicalFacility1} alt="medicalFacility1" />
-                </div>
-                <h3 className="team-item__name">Dr. Essence Page</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
-
-              {/* ITEM 3 */}
-              <article className="team-item">
-                <div className="mfacility-item__img-bg">
-                  <img src={medicalFacility1} alt="medicalFacility1" />
-                </div>
-                <h3 className="team-item__name">Dr. Essence Page</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
-
-              {/* ITEM 4 */}
-              <article className="team-item">
-                <div className="mfacility-item__img-bg">
-                  <img src={medicalFacility1} alt="medicalFacility1" />
-                </div>
-                <h3 className="team-item__name">Dr. Essence Page</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
-              {/* ITEM 5 */}
-              <article className="team-item">
-                <div className="mfacility-item__img-bg">
-                  <img src={medicalFacility1} alt="medicalFacility1" />
-                </div>
-                <h3 className="team-item__name">Dr. Essence Page</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
-              {/* ITEM 6 */}
-              <article className="team-item">
-                <div className="mfacility-item__img-bg">
-                  <img src={medicalFacility1} alt="medicalFacility1" />
-                </div>
-                <h3 className="team-item__name">Dr. Essence Page</h3>
-                <p className="team-item__desc">
-                  DDS, California - Linda University
-                </p>
-              </article>
+              {dataClinics &&
+                dataClinics.length > 0 &&
+                dataClinics.map((item, index) => {
+                  return (
+                    <div
+                      onClick={() => this.handleViewDetailClinic(item)}
+                      className="clinic-item"
+                      key={index}
+                    >
+                      <div className="mfacility-item__img-bg">
+                        <img src={item.image} alt="medicalFacility1" />
+                      </div>
+                      <h3 className="clinic-item__name">{item.name}</h3>
+                      {/* <p className="clinic-item__desc">
+                        DDS, California - Linda University
+                      </p> */}
+                    </div>
+                  );
+                })}
             </Slider>
           </div>
         </div>
@@ -115,4 +99,6 @@ const mapDispatchToProps = (dispatch) => {
   return {};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(medicalFacility);
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(medicalFacility),
+);

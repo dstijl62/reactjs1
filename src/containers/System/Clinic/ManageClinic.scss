@@ -1,0 +1,67 @@
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2e80ce;
+  color: white;
+}
+
+.manage-clinic-container {
+  padding: 20px;
+
+  .manage-clinic-title {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* KHÔNG override row nữa */
+  .more-infor {
+    margin-bottom: 20px;
+  }
+
+  .more-infor-extra {
+    margin-bottom: 20px;
+  }
+  input {
+    font-size: 16px;
+  }
+}
+
+.btn-save-clinic {
+  margin-top: 20px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 12px;
+  background: orange;
+  color: #333;
+}
+
+.btn-create-clinic {
+  margin-top: 20px;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-size: 12px;
+}
