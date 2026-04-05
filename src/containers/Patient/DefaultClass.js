@@ -19,7 +19,7 @@ class DefaultClass extends Component {
   }
 
   render() {
-    return <div>DefaultClass</div>;
+    return <div>Hello world from DefaultClass</div>;
   }
 }
 
