@@ -18,7 +18,7 @@ class ManagePatient extends Component {
     super(props);
 
     this.state = {
-      currentDate: moment(new Date()).startOf("day").valueOf(),
+      currentDate: moment(new Date()).startOf("day").toDate(),
       dataPatient: [],
       isOpenRemedyModal: false,
       dataModal: {},
@@ -33,7 +33,7 @@ class ManagePatient extends Component {
   getDataPatient = async () => {
     let { user } = this.props;
     let { currentDate } = this.state;
-    let formatedDate = new Date(currentDate).getTime();
+    let formatedDate = new Date(this.state.currentDate).getTime();
 
     let res = await getAllPatientForDoctor({
       doctorId: user.id,
@@ -143,7 +143,7 @@ class ManagePatient extends Component {
                   <DatePicker
                     className="form-control fs-4"
                     onChange={this.handleOnchangeDatePicker}
-                    value={this.state.currentDate[0]}
+                    value={this.state.currentDate}
                     // minDate={new Date()}
                   />
                 </div>

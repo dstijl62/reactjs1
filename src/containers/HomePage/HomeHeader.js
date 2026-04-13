@@ -139,69 +139,71 @@ class HomeHeader extends Component {
           </div>
 
           <div className="content-bottom">
-            <div className="options">
-              {/* item 1 */}
-              <div className="option-child">
-                <div className="icon-child">
-                  <img src={hospital} alt="icon" />
+            <div className="container">
+              <div className="row">
+                {/* item 1 */}
+                <div className="col-md-2 text-center option-child">
+                  <div className="icon-child">
+                    <img src={hospital} alt="icon" />
+                  </div>
+                  <div className="text-child">
+                    <FormattedMessage id="banner.specializedexam" />
+                  </div>
                 </div>
-                <div className="text-child">
-                  <FormattedMessage id="banner.specializedexam" />
-                </div>
-              </div>
 
-              {/* item 2 */}
+                {/* item 2 */}
 
-              <div className="option-child">
-                <div className="icon-child">
-                  <img src={remote} alt="icon" />
+                <div className="col-2 text-center option-child">
+                  <div className="icon-child">
+                    <img src={remote} alt="icon" />
+                  </div>
+                  <div className="text-child">
+                    <FormattedMessage id="banner.telemedicine" />
+                  </div>
                 </div>
-                <div className="text-child">
-                  <FormattedMessage id="banner.telemedicine" />
-                </div>
-              </div>
 
-              {/* item 3 */}
+                {/* item 3 */}
 
-              <div className="option-child">
-                <div className="icon-child">
-                  <img src={general} alt="icon" />
+                <div className="col-2 text-center option-child">
+                  <div className="icon-child">
+                    <img src={general} alt="icon" />
+                  </div>
+                  <div className="text-child">
+                    <FormattedMessage id="banner.generalexam" />
+                  </div>
                 </div>
-                <div className="text-child">
-                  <FormattedMessage id="banner.generalexam" />
-                </div>
-              </div>
 
-              {/* item 4 */}
+                {/* item 4 */}
 
-              <div className="option-child">
-                <div className="icon-child">
-                  <img src={test} alt="icon" />
+                <div className="col-2 text-center option-child">
+                  <div className="icon-child">
+                    <img src={test} alt="icon" />
+                  </div>
+                  <div className="text-child">
+                    <FormattedMessage id="banner.labtest" />
+                  </div>
                 </div>
-                <div className="text-child">
-                  <FormattedMessage id="banner.labtest" />
-                </div>
-              </div>
 
-              {/* item 5 */}
+                {/* item 5 */}
 
-              <div className="option-child">
-                <div className="icon-child">
-                  <img src={mental} alt="icon" />
+                <div className="col-2 text-center option-child">
+                  <div className="icon-child">
+                    <img src={mental} alt="icon" />
+                  </div>
+                  <div className="text-child">
+                    <FormattedMessage id="banner.mentalhealth" />
+                  </div>
                 </div>
-                <div className="text-child">
-                  <FormattedMessage id="banner.mentalhealth" />
-                </div>
-              </div>
 
-              {/* item 6 */}
+                {/* item 6 */}
 
-              <div className="option-child">
-                <div className="icon-child">
-                  <img src={dental} alt="icon" />
-                </div>
-                <div className="text-child">
-                  <FormattedMessage id="banner.dentalexam" />
+                <div className="col-2 text-center option-child">
+                  <div className="icon-child">
+                    <img src={dental} alt="icon" />
+                  </div>
+                  <div className="text-child">
+                    <FormattedMessage id="banner.dentalexam" />
+                  </div>
                 </div>
               </div>
             </div>

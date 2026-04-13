@@ -187,52 +187,49 @@
   }
 
   .content-bottom {
-    // border: 1px solid green;
     height: 40%;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
     background-image: linear-gradient(
       rgba(255, 255, 255, 0.1),
       rgba(255, 255, 255, 0.9),
       rgba(255, 255, 255, 1)
     );
 
-    .options {
-      display: flex;
-      gap: 40px;
-      justify-content: center;
-      text-align: center;
+    .option-child {
+      cursor: pointer;
 
-      .option-child {
-        width: 100px;
-        display: flex; // đặt icon + text cùng hàng
-        flex-direction: column; // icon trên – text dưới
-        align-items: center; // căn giữa theo trục dọc
-        gap: 8px; // khoảng cách giữa icon và text
+      .icon-child {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+        border-radius: 10px;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        .icon-child {
-          width: 60px;
-          height: 60px;
-          border-radius: 50%;
-          background: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          img {
-            width: 70%;
-            height: 70%;
-            object-fit: contain;
-          }
+        img {
+          width: 80%;
+          height: 80%;
+          object-fit: cover;
+          transition: all 0.5s ease;
         }
       }
 
+      &:hover .icon-child {
+        transform: scale(1.15) translateY(-10px);
+      }
+
+      &:hover .icon-child img {
+        transform: scale(1.1);
+      }
+
       .text-child {
-        font-size: 17px;
+        margin-top: 8px;
+        font-size: 15px;
         font-weight: 500;
+
         cursor: pointer;
 
         &:hover {
